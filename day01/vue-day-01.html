@@ -11,6 +11,12 @@
         {{message}}
     </div>
 
+    <div id="app1">
+        <ul>
+            <li v-for="item in movies">{{item}}</li>
+        </ul>
+    </div>
+
     <script src="../js/vue.js"></script>
     <script>
         // let(变量)/const(常量)
@@ -18,6 +24,14 @@
             el: '#app', // 用于挂载要管理的元素
             data: { // 定义数据
                 message: 'hello Vue.js'
+            }
+        })
+
+        const app1 = new Vue ({
+            el: '#app1',
+            data: {
+                message: '电影列表',
+                movies: ['楚门的世界', '黑鹰坠落', '黑客帝国', '流浪地球']
             }
         })
     </script>
