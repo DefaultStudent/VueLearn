@@ -18,6 +18,12 @@
         </ul>
     </div>
 
+    <div id="count">
+        <h3>当前计数：{{counter}}</h3>
+        <button v-on:click="add">+</button>
+        <button v-on:click="sub">-</button>
+    </div>
+
     <script src="../js/vue.js"></script>
     <script>
         // let(变量)/const(常量)
@@ -33,6 +39,27 @@
             data: {
                 message: '电影列表',
                 movies: ['楚门的世界', '黑鹰坠落', '黑客帝国', '流浪地球']
+            }
+        })
+
+        const count = new Vue ({
+            el: '#count',
+            data: {
+                counter: 0
+            },
+            methods: {
+                add: function() {
+                    console.log('add被执行')
+                    this.counter++
+                },
+                sub: function() {
+                    if (this.counter <= 0) {
+                        console.log("不能小于0")
+                    } else {
+                        this.counter--
+                        console.log('sub被执行')
+                    }
+                }
             }
         })
     </script>
