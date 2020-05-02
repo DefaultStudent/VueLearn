@@ -10,3 +10,5 @@
 ### MVVM(Model View ViewModel)
 
 <img src="pics/MVVM.png">
+
+### 生命周期
