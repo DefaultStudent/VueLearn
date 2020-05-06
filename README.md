@@ -12,3 +12,11 @@
 <img src="pics/MVVM.png">
 
 ### 生命周期
+
+### 插值操作
+
+``` javascript
+<div id="app">
+    {{message}}
+</div>
+```
