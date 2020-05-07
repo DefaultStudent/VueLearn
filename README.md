@@ -20,3 +20,22 @@
     {{message}}
 </div>
 ```
+
+- v-once
+    不会根据数据的改变而改变；后面不跟任何表达式。(不常用)
+- v-html
+    ```html
+    <div id="app1">
+      <h2 v-html="url"></h2>
+    </div>
+
+    const app1 = new Vue({
+      el: '#app1',
+      data: {
+        message: 'hello world',
+        url: '<a href="http://www.baidu.com">百度一下</a>'
+      }
+    })
+    ```
+- v-text
+    不够灵活，会覆盖掉标签内的内容

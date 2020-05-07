@@ -13,6 +13,13 @@
       <h2>{{firstName}} {{lastName}}</h2>
       <h2>counter : {{counter * 2}}</h2>
     </div>
+
+    <div id="app1">
+      <h2>{{message}}</h2>
+      <h2 v-once>{{message}}</h2>
+      <h2 v-html="url"></h2>
+      <h2 v-text="message"></h2>
+    </div>
     
     <script src="../js/vue.js"></script>
     <script>
@@ -23,6 +30,14 @@
         firstName: 'Kobe',
         lastName: 'Bryant',
         counter: 100
+      }
+    })
+
+    const app1 = new Vue({
+      el: '#app1',
+      data: {
+        message: 'hello world',
+        url: '<a href="http://www.baidu.com">百度一下</a>'
       }
     })
     </script>
